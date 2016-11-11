@@ -70,7 +70,7 @@ void _write_attrib_value(std::ostream& out, const std::string& str) {
 CharacterVector fastrender(const RObject& x) {
   CharacterVector output;
 
-  std::ostringstream out(8192);
+  std::ostringstream out;
   write_any(out, x, 0);
 
   output.push_back(out.str());
