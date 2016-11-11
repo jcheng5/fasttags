@@ -1,0 +1,16 @@
+Package: fasttags
+Type: Package
+Title: Fast rendering of htmltools tag objects
+Version: 0.1.0
+Authors@R: c(
+    person("Joe", "Cheng", role = c("aut", "cre"), email = "joe@rstudio.com"),
+    person(family = "RStudio", role = "cph")
+    )
+Description: A fast but non-compliant replacement for htmltools::doRenderTags.
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Enhances: htmltools
+Imports: Rcpp
+LinkingTo: Rcpp
+RoxygenNote: 5.0.1
