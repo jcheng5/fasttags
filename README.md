@@ -29,6 +29,12 @@ fastrender is not, today, a drop-in replacement for `htmltools::renderTags`. The
 
 As a result, this package should only really be used for simple-yet-large object graphs. htmlwidgets in particular will probably not work.
 
+## Installation
+
+```r
+devtools::install_github("jcheng5/fasttags")
+```
+
 ## License
 
 GPL >=2
