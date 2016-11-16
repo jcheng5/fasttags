@@ -62,16 +62,17 @@ void _write_attrib_value(std::ostream& out, const std::string& str) {
 //' same name by space-delimiting them; and possibly others.
 //'
 //' @param x An htmltools tag object.
+//' @param indent Initial indent level. Use a negative value for no indentation.
 //' @return An HTML string (marked as if returned from \link[htmltools]{HTML}).
 //' @useDynLib fasttags
 //' @importFrom Rcpp evalCpp
 //' @export
 // [[Rcpp::export]]
-CharacterVector fastrender(const RObject& x) {
+CharacterVector fastrender(const RObject& x, int indent = 0) {
   CharacterVector output;
 
   std::ostringstream out;
-  write_any(out, x, 0);
+  write_any(out, x, indent);
 
   output.push_back(out.str());
 

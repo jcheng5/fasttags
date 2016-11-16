@@ -4,10 +4,12 @@
 \alias{fastrender}
 \title{Fast but sloppy HTML rendering}
 \usage{
-fastrender(x)
+fastrender(x, indent = 0L)
 }
 \arguments{
 \item{x}{An htmltools tag object.}
+
+\item{indent}{Initial indent level. Use a negative value for no indentation.}
 }
 \value{
 An HTML string (marked as if returned from \link[htmltools]{HTML}).

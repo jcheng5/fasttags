@@ -10,11 +10,12 @@
 #' same name by space-delimiting them; and possibly others.
 #'
 #' @param x An htmltools tag object.
+#' @param indent Initial indent level. Use a negative value for no indentation.
 #' @return An HTML string (marked as if returned from \link[htmltools]{HTML}).
 #' @useDynLib fasttags
 #' @importFrom Rcpp evalCpp
 #' @export
-fastrender <- function(x) {
-    .Call('fasttags_fastrender', PACKAGE = 'fasttags', x)
+fastrender <- function(x, indent = 0L) {
+    .Call('fasttags_fastrender', PACKAGE = 'fasttags', x, indent)
 }
 

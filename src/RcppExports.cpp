@@ -6,13 +6,14 @@
 using namespace Rcpp;
 
 // fastrender
-CharacterVector fastrender(const RObject& x);
-RcppExport SEXP fasttags_fastrender(SEXP xSEXP) {
+CharacterVector fastrender(const RObject& x, int indent);
+RcppExport SEXP fasttags_fastrender(SEXP xSEXP, SEXP indentSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const RObject& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(fastrender(x));
+    Rcpp::traits::input_parameter< int >::type indent(indentSEXP);
+    rcpp_result_gen = Rcpp::wrap(fastrender(x, indent));
     return rcpp_result_gen;
 END_RCPP
 }
